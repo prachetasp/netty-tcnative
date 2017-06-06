@@ -204,6 +204,7 @@
                         <include name="**/openssl-${opensslVersion}.tar.gz" />
                       </fileset>
                     </ftp>
+                    <copy file="${project.build.directory}/old/1.0.2/openssl-${opensslVersion}.tar.gz" tofile="${project.build.directory}/openssl-${opensslVersion}.tar.gz"/>
                     <!-- Use the tar command (rather than the untar ant task) in order to preserve file permissions. -->
                     <exec executable="tar" failonerror="true" dir="${project.build.directory}/" resolveexecutable="true">
                       <arg line="xfvz openssl-${opensslVersion}.tar.gz" />
